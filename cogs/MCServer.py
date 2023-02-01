@@ -4,7 +4,8 @@ from requests import get
 from mcstatus import JavaServer
 from os import system
 
-GUILD_IDS = [637782002145165342]
+#guild_ids go here
+GUILD_IDS = []
 
 class MCServer(commands.Cog):
     def __init__(self, bot: commands.Bot):
@@ -42,7 +43,8 @@ class MCServer(commands.Cog):
         await interaction.response.defer(ephemeral=True)
 
         if self.old_player_count < 0:
-            system(r'C:\Users\thiba\Cubange\start.bat')
+            #put path to server .bat goes here
+            system(r'')
 
             print(f"\nServer started by: {interaction.user}")
             await interaction.send("The server has started.", ephemeral=True)
@@ -53,6 +55,7 @@ class MCServer(commands.Cog):
     async def mcinfo(self, interaction: nextcord.Interaction):
         await interaction.response.defer(with_message=True)
 
+        #modify this as needed
         await interaction.send(
 f"""Server info:```
 IP/Port:    {self.IP}:28462
