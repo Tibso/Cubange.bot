@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 
 load_dotenv('token.env')
 
-GUILD_IDS = [637782002145165342]
-
 bot = commands.Bot()
 
 for filename in listdir('./cogs'):
